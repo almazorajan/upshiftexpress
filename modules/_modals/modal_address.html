@@ -1,0 +1,45 @@
+
+<div class="modal fade" id="modal_address" tabindex="-1" role="dialog" aria-labelledby="address" aria-hidden="true">
+	<div class="modal-dialog modal-md">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="address">Address</h4>
+			
+			</div>
+			
+			<div class="modal-body">
+
+				<div class="form-group">
+					<label>House No.</label>
+					<input type="text" class="form-control" ng-model="modal.address.houseno">
+				</div>
+
+				<div class="form-group">
+					<label>Company Name / Building</label>
+					<input type="text" class="form-control" ng-model="modal.address.comapanyname">
+				</div>
+
+				<div class="form-group">
+					<label>Barangay / Subdivision</label>
+					<input type="text" class="form-control" ng-model="modal.address.barangay">
+				</div>
+
+				<div class="form-group">
+					<label>City</label>
+					<input type="text" class="form-control" ng-model="modal.address.city">
+				</div>
+
+				<div class="form-group">
+					<label>District</label>
+					<input type="text" class="form-control" ng-model="modal.address.district">
+				</div>
+			</div>
+			
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-skin">Save</button>
+			</div>
+		</div>
+	</div>
+</div>

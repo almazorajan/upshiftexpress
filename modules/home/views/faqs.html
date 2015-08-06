@@ -1,0 +1,36 @@
+<div ng-include="'modules/home/views/navbar.html'"></div>
+<section id="service" class="home-section text-center bg-gray">
+    <div class="heading-about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="wow bounceInDown" data-wow-delay="0.4s">
+                        <div class="section-heading">
+                            <h2>FAQs</h2>
+                            <h4>(Frequently Asked Questions)</h4>
+                            <br />
+                            <i class="fa fa-2x fa-angle-down"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2 col-lg-offset-5">
+                <hr class="marginbot-50">
+            </div>
+        </div>
+        <div class="row text-left">
+            <div class="col-lg-12">
+                <section ng-repeat="item in faqs" class="wow bounceInUp" data-wow-delay="2s">
+                    <p><strong>{{ $index+1 }}.  {{ item.question }}</strong></p>
+                    <p>
+                        <div ng-repeat="ans in item.answer" ng-bind-html="ans"></div>
+                    </p>
+                </section>
+            </div>
+        </div>
+    </div>
+</section>

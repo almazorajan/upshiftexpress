@@ -1,0 +1,148 @@
+
+<div ng-include="'modules/main.book/views/navbar.html'"></div>
+
+<!-- Section: contact -->
+<section id="contact" class="home-section text-center">
+    <div class="heading-contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="wow bounceInDown" data-wow-delay="0.4s">
+                        <div class="section-heading">
+                            <h2>My Profile</h2>
+                            <i class="fa fa-2x fa-angle-down"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" ng-repeat="tab in tabs">
+                    <a role="tab" class="{{ tab.isActive ? 'active' : '' }}" data-toggle="tab" ng-click="showTab(tab)" aria-controls="{{ tab.text }}">{{ tab.text }}</a>
+                </li>
+            </ul>
+            <div class="col-lg-3">&nbsp;</div>
+            <div class="col-lg-6">
+                <br />
+                <br />
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <form autocomplete="off" ng-submit="saveChanges()">
+                        <div role="tabpanel" class="tab-pane active">
+                            <div ng-switch="activeTab">
+                                
+                                <div ng-switch-when="Update Email">
+                                    
+                                    <label>Current Email</label>
+                                    <input type="text" class="form-control text-center" ng-value="profile.currentEmail" ng-disabled="true" />
+                                    
+                                    <br />
+                                    
+                                    <label>New Email</label>
+                                    <input type="email" class="form-control text-center" ng-model="profile.newEmail" placeholder="Enter your new Email" required />
+                                    
+                                    <br />
+                                    
+                                    <label>Type current password</label>
+                                    <input type="password" class="form-control text-center" ng-model="profile.currentPassword" placeholder="Type your current password" required />
+                                
+                                </div>
+
+                                <div ng-switch-when="Update Personal Info">
+                                    
+                                    <label>First Name</label>
+                                    <input type="text" class="form-control text-center" ng-model="profile.firstName" required />
+
+                                    <br />
+
+                                    <label>Middle Name</label>
+                                    <input type="text" class="form-control text-center" ng-model="profile.middleName" />
+
+                                    <br />
+
+                                    <label>Last Name</label>
+                                    <input type="text" class="form-control text-center" ng-model="profile.lastName" required />
+
+                                    <br />
+
+                                    <label>Current Password</label>
+                                    <input type="password" class="form-control text-center" ng-model="profile.currentPassword" required />
+
+                                </div>
+                                
+                                <div ng-switch-when="Update Password">
+                                    
+                                	<label>Type current password</label>
+                                    <input type="password" class="form-control text-center" ng-model="profile.currentPassword" placeholder="Type your old password" required />
+                                    
+                                    <br />
+                                    
+                                    <label>Type new password</label>
+                                    <input type="password" class="form-control text-center" ng-model="profile.newPassword" placeholder="Type your desired new password" required />
+
+                                    <br />
+
+                                    <label>Confirm new password</label>
+                                    <input type="password" class="form-control text-center" ng-model="profile.confirmNewPassword" placeholder="Re-type your desired new password" required />
+
+                                </div>
+                                <div ng-switch-when="Update Address">
+                                    
+                                	<label>House No. / Street</label>
+                                    <input type="text" class="form-control text-center" required ng-model="profile.houseNo" />
+                                    
+                                    <br />
+
+                                    <label>Company Name / Building</label>
+                                    <input type="text" class="form-control text-center" required ng-model="profile.companyName" />
+                                    
+                                    <br />
+
+                                    <label>Barangay / Subdivision</label>
+                                    <input type="text" class="form-control text-center" required ng-model="profile.barangay"/>
+                                    
+                                    <br />
+
+                                    <label>City</label>
+                                    <select class="form-control" required ng-model="profile.city" ng-change="updateDistricts( profile.city )" ng-options="area.cityName as area.cityName for area in serviceableAreas"></select>
+                                    
+                                    <br />
+
+                                    <label>District</label>
+                                    <select class="form-control text-center" required ng-model="profile.district" ng-options="district.districtName as district.districtName for district in currentDistricts"></select>
+
+                                    <br />
+
+                                    <label>Current Password</label>
+                                    <input type="password" class="form-control text-center" ng-model="profile.currentPassword" required />
+                                
+                                </div>
+                                <div ng-switch-when="Update Contact No">
+                                    
+                                	<label>Contact No</label>
+                            		<input type="text" class="form-control text-center" ng-model="profile.contactNo" required />
+
+                                    <br />
+
+                                    <label>Current Password</label>
+                                    <input type="password" class="form-control text-center" ng-model="profile.currentPassword" required />
+                                </div>
+                            </div>
+                        </div>
+
+                        <br />
+
+                        <button type="submit" class="btn btn-primary btn-block">Save Changes</button>
+
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-3">&nbsp;</div>
+        </div>
+    </div>
+</section>
+<!-- /Section: contact -->

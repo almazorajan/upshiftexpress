@@ -1,0 +1,80 @@
+[
+	{
+		"question"	:	"How do I schedule a pick-up?",
+		"answer"	:	[
+							"Book through our website by creating an account. www.upshift.com.ph",
+							"Call our hotlines:",
+							"<strong>Landline:</strong> 412 4434",
+							"<strong>Globe:</strong> +63 917 517 6355",
+							"<strong>Smart:</strong> +63 998 984 8692",
+							"<strong>Sun:</strong> +63 925 887 3294"
+						]
+	},
+	{
+		"question"	:	"What is the cut off time on scheduling a pickup?",
+		"answer"	:	[
+							"<strong>Next Day Delivery</strong>, <strong>Next Day Delivery with Collect On Delivery</strong> and <strong>Provincial Delivery</strong>:",
+							"Monday to Saturday - 2:00PM <br /> <br />",
+							"<strong>Same Day Delivery</strong> and <strong>Same Day with Collect On Delivery:</strong>",
+							"Monday to Saturday - 12:00PM"
+						]
+	},
+	{
+		"question"	:	"What time do you pickup and delivery packages?",
+		"answer"	:	[
+							"All pick-ups and deliveries will be made within the day without specific time.",
+							"All bookings made after the cut off time will be scheduled for pick-up the next working day."
+						]
+	},
+	{
+		"question"	:	"What days are you open?",
+		"answer"	:	[
+							"We are open to do free pick-ups and door-to-door deliveries from Monday to Saturday – 9:00AM to 6:00PM",
+							"except Sundays and holidays."
+						]
+	},
+	{
+		"question"	:	"What are the transit times of your deliveries?",
+		"answer"	:	[
+							"<strong>Next Day Delivery / Next Day with Collect On Delivery:</strong> delivered the next working day",
+							"<strong>Same Day Delivery / Same Day with Collect On Delivery:</strong> picked up and delivered within the day",
+							"<strong>Provincial Delivery:</strong> 1 to 3 working days (incomplete details or unavailability of the receiver may delay the delivery)"
+						]
+	},
+	{
+		"question"	:	"What are your Shipping Rates?",
+		"answer"	:	[
+							"Please click this link to see our shipping rates : <a href=\"#/Services\">Upshift Express Services and Rates</a>"
+						]
+	},
+	{
+		"question"	:	"What are the sizes of your pouch?",
+		"answer"	:	[
+							"ShiftPAC-Small – 9 x 14 inches",
+							"ShiftPAC- Large – 12 x 18 inches"
+						]
+	},
+	{
+		"question"	:	"What if the item does not fit your pouch?",
+		"answer"	:	[
+							"You will be required to use your own packaging (CustomPAC), if the item does not fit our pouch.",
+							"It will be weighed and measured by our courier upon pick up to determine the chargeable weight.",
+							"<br />",
+							"* Chargeable weight vs ACTUAL WEIGHT vs. VOLUMETRIC/DIMENSIONAL WEIGHT, whichever is higher. <br /><br />",
+							"To compute for the volumetric weight: Length x Width x Height (cm) / 3500"
+						]
+	},
+	{
+		"question"	:	"What is Collect On Delivery Service?",
+		"answer"	:	[
+							"COD or Collect On Delivery (cash on delivery) service is for Metro Manila only, available for Next Day or Same Day Delivery. <br /> <br />",
+							"<strong>How it works:</strong> <br />",
+							"- Pick up the unpaid item from the sender/seller. <br />",
+							"- Deliver the item to the receiver, then collect the payment for the item itself. <br />",
+							"- The payment will be deposited straight to the seller's bank account the next banking day. <br />",
+							"- Scanned deposit slips will be sent through email for proof.",
+							"* If the receiver/buyer rejects the item/s and did not pay for the COD amount,",
+							"there’s a Php20.00 refund out of the shipping fee since there’s no transaction occurred."
+						]
+	}
+]

@@ -1,0 +1,5 @@
+
+app
+.factory('computeCostFactory', function() {
+	
+})

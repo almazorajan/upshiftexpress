@@ -1,0 +1,199 @@
+<!-- metro manila partial view -->
+<div ng-include="'modules/main.book/views/navbar.html'"></div>
+
+<section id="booking" class="home-section text-center bg-gray">
+    <div class="heading-about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="wow bounceInDown" data-wow-delay="0.4s">
+                        <div class="section-heading">
+                            <h2>Booking</h2>
+                            <i class="fa fa-2x fa-angle-down"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <form autocomplete="off" ng-submit="submitBook()">
+            <div class="row">
+                <div class="col-lg-2 col-lg-offset-5">
+                    <hr class="marginbot-50">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-left">
+                    <div class="col-lg-12"></div>
+                    <div class="col-lg-6 wow bounceInLeft">
+                        <br />
+                        <h3 class="text-center">Collection Information</h3>
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label>Sender Name</label>
+                                <input type="text" class="form-control" ng-model="book.sender.name" required />
+                            </div>
+                            <div class="form-group">
+                                <label>House No. / Street</label>
+                                <input type="text" class="form-control" ng-model="book.sender.houseNo" required />
+                            </div>
+                            <div class="form-group">
+                                <label>Company Name / Building</label>
+                                <input type="text" class="form-control" ng-model="book.sender.companyName" required />
+                            </div>
+                            <div class="form-group">
+                                <label>Barangay / Subdivision</label>
+                                <input type="text" class="form-control" ng-model="book.sender.barangay" required />
+                            </div>
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <label>City</label>
+                            
+                            <select ng-change="updateDistrict( 'from', book.sender.city )" ng-if="!isProvincialDelivery" class="form-control" ng-model="book.sender.city" ng-options="city.cityName as city.cityName for city in from" required>
+                            </select>
+                            
+                            <input ng-if="isProvincialDelivery" type="text" class="form-control" ng-model="book.sender.provincialCity" required />
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <label>District</label>
+                            <select ng-if="!isProvincialDelivery" class="form-control" ng-model="book.sender.district" ng-options="district.districtName as district.districtName for district in fromDistricts" required>
+                            </select>
+                            <input ng-if="isProvincialDelivery" type="text" class="form-control" ng-model="book.sender.provincialDistrict" required />
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <label>Contact No.</label>
+                            <input type="text" class="form-control" ng-model="book.sender.contactNo" required />
+                        </div>
+                    </div>
+                    <div class="col-lg-6 wow bounceInRight">
+                        <br />
+                        <h3 class="text-center">Delivery Information</h3>
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label>Receiver Name</label>
+                                <input type="text" class="form-control" ng-model="book.receiver.name" required />
+                            </div>
+                            <div class="form-group">
+                                <label>House No. / Street</label>
+                                <input type="text" class="form-control" ng-model="book.receiver.houseNo" required />
+                            </div>
+                            <div class="form-group">
+                                <label>Company Name / Building</label>
+                                <input type="text" class="form-control" ng-model="book.receiver.companyName" required />
+                            </div>
+                            <div class="form-group">
+                                <label>Barangay / Subdivision</label>
+                                <input type="text" class="form-control" ng-model="book.receiver.barangay" required />
+                            </div>
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <label>City</label>
+                            <select ng-change="updateDistrict( 'to', book.receiver.city )" ng-if="!isProvincialDelivery" class="form-control" ng-model="book.receiver.city" ng-options="city.cityName as city.cityName for city in to" required>
+                            </select>
+                            <input ng-if="isProvincialDelivery" type="text" class="form-control" ng-model="book.receiver.provincialCity" >
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <label>District</label>
+                            <select ng-if="!isProvincialDelivery" class="form-control" ng-model="book.receiver.district" ng-options="district.districtName as district.districtName for district in toDistricts" required>
+                            </select>
+                            <input ng-if="isProvincialDelivery" type="text" class="form-control" ng-model="book.receiver.provincialDistrict" required />
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <label>Contact No.</label>
+                            <input type="text" class="form-control" ng-model="book.receiver.contactNo" required />
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <hr />
+                    </div>
+                    <div class="col-lg-6 wow bounceInLeft">
+                        <div class="form-group col-lg-12">
+                            <span class="help-block text-center">
+                            <strong>Reminder:</strong> Maximum weight is 15kg. For heavier shipments, please call our hotlines.  
+                        </span>
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <label>Service Level</label>
+                            <select class="form-control" ng-model="book.serviceLevel" ng-options="service.serviceLevel as service.serviceLevel for service in serviceLevels" required />
+                            </select>
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <label>Size</label>
+                            <select class="form-control" ng-model="book.size" ng-options="size.size as size.size for size in shippingSizes" />
+                            </select>
+                        </div>
+                        <div class="form-group col-lg-3">
+                            <label>Height</label>
+                            <input type="number" step="any" class="form-control" ng-model="book.height" required />
+                        </div>
+                        <div class="form-group col-lg-3">
+                            <label>Length</label>
+                            <input type="number" step="any" class="form-control" ng-model="book.length" required />
+                        </div>
+                        <div class="form-group col-lg-3">
+                            <label>Width</label>
+                            <input type="number" step="any" class="form-control" ng-model="book.width" required />
+                        </div>
+                        <div class="form-group col-lg-3">
+                            <label>Weight</label>
+                            <input type="number" step="any" class="form-control" max="15" ng-model="book.weight" required />
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <label>Dimension</label>
+                            <input type="number" class="form-control" max="15" ng-value="book.dimension" ng-disabled="true" required />
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <label>Chargeable Weight</label>
+                            <input type="number" class="form-control" max="15" ng-value="book.chargeableWeight" ng-disabled="true" />
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <label>Declared Value</label>
+                            <input type="number" class="form-control" maxlength="7" ng-model="book.declaredValue" required />
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <label>Payment</label>
+                            <select class="form-control" ng-model="book.paymentMethod" ng-disabled="book.serviceLevel != 'Same Day Delivery'" required>
+                                <option>Pick-up</option>
+                                <option>Deliver</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 wow bounceInRight">
+                        <fieldset ng-disabled="book.serviceLevel == 'Next Day w/ Collect On Delivery' || book.servicelevel == 'Same Day w/ Collect On Delivery'">
+                            <h3 class="text-center">Collect On Delivery</h3>
+                            <div class="form-group">
+                                <label>Bank Name</label>
+                                <input type="text" class="form-control" ng-model="book.cod.bankName" ng-disabled="!isCollectOnDelivery" />
+                            </div>
+                            <div class="form-group">
+                                <label>Account Name</label>
+                                <input type="text" class="form-control" ng-model="book.cod.accountName" ng-disabled="!isCollectOnDelivery" />
+                            </div>
+                            <div class="form-group">
+                                <label>Account No.</label>
+                                <input type="text" class="form-control" ng-model="book.cod.accountNo" ng-disabled="!isCollectOnDelivery" />
+                            </div>
+                            <div class="form-group">
+                                <label>Amount</label>
+                                <input type="text" class="form-control" ng-model="book.cod.amount" ng-disabled="!isCollectOnDelivery" />
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="col-lg-12 wow bounceInLeft"><hr /></div>
+                    <div class="col-lg-12">
+                        <div class="form-group col-lg-6">
+                            &nbsp;
+                        </div>
+                        <div class="form-group col-lg-6 wow bounceInRight">
+                            <label>Amount Due</label>
+                            <input class="form-control input-lg text-right" type="text" ng-value="book.amountDue | number : 2" ng-disabled="true" style="font-size:67px;height:auto;font-weight:bold;">
+                            <br />
+                            <button type="submit" class="btn btn-skin btn-lg btn-block">BOOK</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>

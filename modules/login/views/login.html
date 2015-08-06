@@ -1,0 +1,74 @@
+<div ng-include="'modules/home/views/navbar.html'">
+</div ng-include>
+<section class="home-section text-center bg-gray">
+    <div class="heading-about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="wow bounceInDown" data-wow-delay="0.4s">
+                        <div class="section-heading">
+                            <h2>Login</h2>
+                            <i class="fa fa-2x fa-angle-down"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2 col-lg-offset-5">
+                <hr class="marginbot-50">
+            </div>
+        </div>
+        <div class="row text-left">
+            <div class="col-lg-12">
+                <div class="col-lg-4"></div>
+                <div class="col-lg-4">
+                    <div class="alert alert-success" role="alert" ng-show="loginSuccessful">Login Successful! You will be logged in <span id="timeout"></span> seconds</div>
+                    <div class="alert alert-danger" role="alert" ng-show="loginUnsuccessful && !loginSuccessful">Error occured while logging in. Please check your Email and Password</div>
+                    <form autocomplete="off" ng-submit="login()">
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="text" class="form-control" ng-model="credentials.email" placeholder="email@website.com">
+                        </div>
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input type="password" class="form-control" ng-model="credentials.password" placeholder="password">
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-skin btn-block btn-lg" value="LOGIN">
+                        </div>
+                    </form>
+                    <div class="form-group text-center">
+                        <br />
+                        <button class="btn btn-default" data-toggle="modal" data-target="#reset-password-modal">Reset Password</button>
+                    </div>
+                </div>
+                <div class="col-lg-4"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="modal fade" id="reset-password-modal" tabindex="-1" role="dialog" aria-labelledby="reset-password" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <form autocomplete="off" ng-submit="forgotPassword()">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="reset-password">Reset Password</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" class="form-control" ng-model="forgotPasswordEmail" placeholder="Please provide your email">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Reset Password</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,100 @@
+<div ng-include="'modules/home/views/navbar.html'">
+</div>
+<section id="about" class="home-section text-center">
+    <div class="heading-about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="wow bounceInDown" data-wow-delay="0.4s">
+                        <div class="section-heading">
+                            <h2>Track your booking</h2>
+                            <i class="fa fa-2x fa-angle-down"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2 col-lg-offset-5">
+                <hr class="marginbot-50">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="wow bounceInUp" data-wow-delay="0.2s">
+                    <div class="team">
+                        <div class="inner">
+                            <div class="avatar">
+                                <div class="form-group">
+                                    <div class="col-lg-4">&nbsp;</div>
+                                    <div class="col-lg-4">
+                                        <label>Reference No / Waybill No / Provincial Tracking No</label>
+                                        <input type="text" class="form-control text-center" ng-model="referenceNo" onkeyup="console.log(this.value)" required />
+                                        <br />
+                                        <button type="button" class="btn btn-skin btn-block" ng-click="trackBook()">Track</button>
+                                    </div>
+                                    <div class="col-lg-4">&nbsp;</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <br />
+                <br />
+            </div>
+            <div class="col-lg-3">&nbsp;</div>
+            <div class="col-lg-6">
+                <table class="table table-hover">
+                    <tbody ng-if="!tableIsEnabled && !loading">
+                        <tr>
+                            <td colspan="2">No Information found for "{{ referenceNo }}"</td>
+                        </tr>
+                    </tbody>
+                    <tbody ng-if="tableIsEnabled">
+                        <tr>
+                            <th>Online Reference No.</th>
+                            <td class="text-left">{{ book.onlineReferenceNo }}</td>
+                        </tr>
+                        <tr>
+                            <th>Waybill No.</th>
+                            <td class="text-left">{{ book.waybillNo }}</td>
+                        </tr>
+                        <tr>
+                            <th>Provincial Tracking No.</th>
+                            <td class="text-left">{{ book.provincialTrackingNo }}</td>
+                        </tr>
+                        <tr>
+                            <th>Service Level</th>
+                            <td class="text-left">{{ book.serviceLevel }}</td>
+                        </tr>
+                        <tr>
+                            <th>Size</th>
+                            <td class="text-left">{{ book.size }}</td>
+                        </tr>
+                        <tr>
+                            <th>Sender</th>
+                            <td class="text-left">{{ book.sender }}</td>
+                        </tr>
+                        <tr>
+                            <th>Receiver</th>
+                            <td class="text-left">{{ book.receiver }}</td>
+                        </tr>
+                        <tr>
+                            <th>Latest Status</th>
+                            <td class="text-left">{{ book.lateststatus }}</td>
+                        </tr>
+                        <tr>
+                            <th>Reason</th>
+                            <td class="text-left">{{ book.reason }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-lg-3">&nbsp;</div>
+        </div>
+    </div>
+</section>

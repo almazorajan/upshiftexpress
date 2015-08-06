@@ -1,0 +1,23 @@
+<div ng-include="'modules/home/views/navbar.html'">
+</div ng-include>
+<!-- Section: registration form -->
+<section id="about" class="home-section text-center">
+    <div class="heading-about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="section-heading">
+                        <h2>Hi {{ newMember.name }}!</h2>
+                        <h2>Thank you for Signing-up!</h2>
+                        <i class="fa fa-2x fa-angle-down"></i>
+                        <br />
+                        <br />
+                        <button class="btn btn-default btn-lg" ng-click="redirectToLogin()">Click here to login</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- [end] div.heading-about -->
+</section>
+<!-- [end] registration form -->

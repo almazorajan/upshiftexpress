@@ -1,0 +1,7 @@
+[
+	{ "serviceLevel" : "Same Day Delivery" },
+	{ "serviceLevel" : "Next Day Delivery" },
+	{ "serviceLevel" : "Same Day Delivery w/ Collect On Delivery" },
+	{ "serviceLevel" : "Next Day Delivery w/ Collect On Delivery" },
+	{ "serviceLevel" : "Provincial Delivery" }
+]

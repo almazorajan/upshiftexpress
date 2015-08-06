@@ -1,0 +1,115 @@
+[
+	{
+		"servicename"	: 	"Next Day Delivery",
+		"description"	: 	"Package is delivered within the next working day",
+		"cutofftime"	: 	"2:00PM Monday-Saturday",
+		"sizes"			:	[
+								{
+									"packagename"		:	"ShiftPAC-Small",
+									"dimension"			:	"(9 x 14 inches)",
+									"chargeableweight"	: 	"UNLI-WEIGHT",
+									"rate"				:	40.00,
+									"rateadditional"	:	""
+								},
+								{
+									"packagename"		:	"ShiftPAC-Large",
+									"dimension"			:	"(12 x 18 inches)",
+									"chargeableweight"	: 	"UNLI-WEIGHT",
+									"rate"				:	60.00,
+									"rateadditional"	:	""
+
+								},
+								{
+									"packagename"		:	"CustomPAC",
+									"dimension"			:	"(Own Packaging)",
+									"chargeableweight"	: 	"Does not fit ShiftPAC",
+									"rate"				: 	125.00,
+									"rateadditional"	:	"(+) Php 5.00 per kilo"
+								}
+							]
+	},
+	{
+		"servicename"	:	"Same Day Delivery",
+		"description"	:	"Package is delivered within the day",
+		"cutofftime"	:	"2:00PM Monday-Saturday",
+		"sizes"			:	[
+								{
+									"packagename"		:	"ShiftPAC-Small",
+									"dimension"			:	"(9 x 14 inches)",
+									"chargeableweight"	: 	"UNLI-WEIGHT",
+									"rate"				:	40.00,
+									"rateadditional"	:	""
+								},
+								{
+									"packagename"		:	"ShiftPAC-Large",
+									"dimension"			:	"(12 x 18 inches)",
+									"chargeableweight"	: 	"UNLI-WEIGHT",
+									"rate"				:	60.00,
+									"rateadditional"	:	""
+								},
+								{
+									"packagename"		:	"CustomPAC",
+									"dimension"			:	"(Own Packaging)",
+									"chargeableweight"	: 	"Does not fit ShiftPAC",
+									"rate"				:	125.00,
+									"rateadditional"	:	"(+) Php 5.00 per kilo"
+								}
+							]
+	},
+	{
+		"servicename"	:	"Collect On Delivery (COD)",
+		"description"	:	"Free for Same Day Delivery. Also available for Next Day Delivery but with charge.",
+		"cutofftime"	:	"2:00PM Monday-Saturday",
+		"sizes"			:	[
+								{
+									"packagename"		:	"ShiftPAC-Small",
+									"dimension"			:	"(9 x 14 inches)",
+									"chargeableweight"	: 	"UNLI-WEIGHT",
+									"rate"				:	60.00,
+									"rateadditional"	:	""
+								},
+								{
+									"packagename"		:	"ShiftPAC-Large",
+									"dimension"			:	"(12 x 18 inches)",
+									"chargeableweight"	: 	"UNLI-WEIGHT",
+									"rate"				:	80.00,
+									"rateadditional"	:	""
+								},
+								{
+									"packagename"		:	"CustomPAC",
+									"dimension"			:	"(Own Packaging)",
+									"chargeableweight"	: 	"Does not fit ShiftPAC",
+									"rate"				:	145.00,
+									"rateadditional"	:	"(+) Php 5.00 per kilo"
+								}
+							]
+	},
+	{
+		"servicename"	:	"Provincial Delivery",
+		"description"	:	"Nationwide delivery outside Metro Manila",
+		"cutofftime"	:	"",
+		"sizes"			:	[
+								{
+									"packagename"		:	"ShiftPAC-Small",
+									"dimension"			:	"(9 x 14 inches)",
+									"chargeableweight"	: 	"Up to 3kg",
+									"rate"				:	85.00,
+									"rateadditional"	:	""
+								},
+								{
+									"packagename"		:	"ShiftPAC-Large",
+									"dimension"			:	"(12 x 18 inches)",
+									"chargeableweight"	:	"Up to 3kg",
+									"rate"				:	155.00,
+									"rateadditional":""
+								},
+								{
+									"packagename"		:	"CustomPAC",
+									"dimension"			:	"(Own Packaging)",
+									"chargeableweight"	: 	"Up to 3kg",
+									"rate"				:	155.00,
+									"rateadditional"	:	"(+) Php 60.00 per additional kilo"
+								}
+							]
+	}
+]

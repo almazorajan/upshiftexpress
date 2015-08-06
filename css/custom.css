@@ -1,0 +1,35 @@
+.intro {
+	background-attachment: fixed;
+}
+
+.intro .page-scroll {
+	margin-top: 8.5%;
+}
+
+.intro .page-scroll a:link {
+	color: #FFF;
+	background-color: #ff69b4;
+}
+
+.btn.btn-skin {
+	background-color: #ff69b4; 
+	border-color: #ff69b4;
+	margin-bottom: 5%;
+}
+
+.text_color {
+	background-color: #ff69b4;
+} 
+
+.footer {
+	background-color: #ff69b4;
+}
+
+.home-section {
+	margin-top: 8%;
+	margin-bottom: 4%;
+}
+
+.upshift-color {
+	color:#ff69b4;
+}
